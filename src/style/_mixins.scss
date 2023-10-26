@@ -5,3 +5,18 @@
   border: none;
   cursor: pointer;
 }
+
+@mixin input-wrapper-styles {
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+@mixin input-styles {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px;
+  background-color: lightblue;
+  color: black;
+}

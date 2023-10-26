@@ -4,6 +4,10 @@ import { Input } from "../../components/Input/Input";
 import { FaBeer } from "react-icons/fa";
 import { FaAlgolia } from "react-icons/fa";
 
+import { InputGroup } from "../../components/InputGroup/InputGroup";
+
+import { inputs } from "../../constants/inputs";
+
 import styles from "./Home.module.scss";
 
 export default function Home() {
@@ -15,6 +19,7 @@ export default function Home() {
         title="ciaooo"
         text="ciaooo"
         icon={<FaBeer />}
+        hoverEffect={true}
       />
       <Button
         variant="success"
@@ -22,8 +27,10 @@ export default function Home() {
         title="ciaooo"
         text="bonjour"
         icon={<FaAlgolia />}
+        hoverEffect={false}
       />
-      <Input placeholder="Type something" title="title 1" />
+      <Input placeholder="Type something" title="title 1" label="Label" />
+      <InputGroup inputs={inputs} />
     </div>
   );
 }

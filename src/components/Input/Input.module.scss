@@ -1,0 +1,22 @@
+@import "../../style/variables";
+@import "../../style/mixins";
+
+.input-wrapper {
+  @include input-wrapper-styles;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  @include input-styles;
+
+  &::placeholder {
+    color: grey;
+  }
+}
+
+.input-label {
+  color: blueviolet;
+  font-family: Arial, Helvetica, sans-serif;
+}

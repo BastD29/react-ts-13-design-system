@@ -1,12 +1,15 @@
-// @import "../../styles/variables";
-// @import "../../styles/mixins";
+// @import "../../style/variables";
+// @import "../../style/mixins";
 
-@import "../../style/variables";
-@import "../../style/mixins";
+// @use "../../style/variables" as *;
+// @use "../../style/mixins" as *;
+
+@use "../../style/variables" as variables;
+@use "../../style/mixins" as mixins;
 
 .button {
-  @include button-styles;
-  background-color: $primary-color;
+  @include mixins.button-styles;
+  background-color: variables.$primary-color;
   color: white;
 
   display: flex;
@@ -14,23 +17,23 @@
   justify-content: space-between;
 
   &.secondary {
-    background-color: $secondary-color;
+    background-color: variables.$secondary-color;
   }
 
   &.success {
-    background-color: $success-color;
+    background-color: variables.$success-color;
   }
 
   &.warning {
-    background-color: $warning-color;
+    background-color: variables.$warning-color;
   }
 
   &.error {
-    background-color: $error-color;
+    background-color: variables.$error-color;
   }
 
   &.info {
-    background-color: $info-color;
+    background-color: variables.$info-color;
   }
 
   &__text {
@@ -39,5 +42,31 @@
 
   &__icon {
     color: yellow;
+  }
+}
+
+.hoverEffect {
+  &:hover {
+    background-color: darken(variables.$primary-color, 10%);
+  }
+
+  &.secondary:hover {
+    background-color: darken(variables.$secondary-color, 10%);
+  }
+
+  &.success:hover {
+    background-color: darken(variables.$success-color, 10%);
+  }
+
+  &.warning:hover {
+    background-color: darken(variables.$warning-color, 10%);
+  }
+
+  &.error:hover {
+    background-color: darken(variables.$error-color, 10%);
+  }
+
+  &.info:hover {
+    background-color: darken(variables.$info-color, 10%);
   }
 }
